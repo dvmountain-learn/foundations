@@ -1,13 +1,11 @@
 ////////// PROBLEM 1 //////////
 /*
-  Create a variable called 'lovesCode' and set it equal to true. 
-  Check to see if 'lovesCode' is equal to true or false. 
-  If it is true, console log "I love to code!"
-  If it is not, console log "Coding has its challenges."
+  Create a variable called 'lovesCode' and set it equal to true. Check to see if 'lovesCode' is equal to true or false. If it is true, console log "I love to code!" If it is not, console log "Coding has its challenges."
 */
 
 //CODE HERE
 let lovesCode = true
+// if (lovesCode === true) {
 if (lovesCode) {
   console.log('I love to code!')
 } else {
@@ -62,11 +60,11 @@ let rain = true;
 */
 
 //CODE HERE
-if (temperature > 80) {
+if (temperature >= 80 && rain) {
   console.log('You should wear a t-shirt and take an umbrella.')
-} else if (temperature > 60 && temperature < 80) {
+} else if ((temperature >= 60 && temperature < 80) && rain) {
   console.log('You should wear a rain-jacket.')
-} else {
+} else if (temperature < 60 && rain) {
   console.log('You should wear a jacket and carry an umbrella.')
 }
 
@@ -78,6 +76,7 @@ if (temperature > 80) {
 */
 
 //CODE HERE
+// for (var i = 0; i < 10; i++) {
 for (let index = 0; index < 10; index++) {
   console.log(`${index}: hello`)
 }
@@ -120,7 +119,7 @@ let passingScore = 7;
 
 //CODE HERE
 while (score < passingScore) {
-  // score++
+  //score++
   ++score
   console.log(`${score}: Your score is not high enough.`)
 }
@@ -137,6 +136,7 @@ while (score < passingScore) {
 
 //CODE HERE
 let changeMyMind = true
+// if (changeMyMind !== true)
 if (changeMyMind) {
   changeMyMind = false
 } else {
@@ -147,7 +147,13 @@ if (changeMyMind) {
 // Using the "not" operator (!), change the current value of changeMyMind to true (it should currently be set to false due to the if-else statement in Problem 9). After you change the value of changeMyMind, console.log it's new value (it should now read true).
 
 //CODE HERE
-changeMyMind = !true
+// changeMyMind = !true
+
+if (changeMyMind !== true) {
+  changeMyMind = false
+} else {
+  changeMyMind = true
+}
 console.log(changeMyMind)
 
 
@@ -160,7 +166,9 @@ let z = 5;
 
 //CODE HERE
 while (z > 0) {
-  console.log(z)
+  for (let i = z; i > 0; i--) {
+    console.log(i)
+  }
   // --z
   z--
 }
