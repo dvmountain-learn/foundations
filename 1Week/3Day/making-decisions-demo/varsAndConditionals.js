@@ -24,3 +24,12 @@ if (jonSnowHealth <= jamieLannisterAttack) {
     jonSnowHealth = jonSnowHealth - jamieLannisterAttack
     console.log(`Jon Snow health is down to : ${jonSnowHealth}`)
 }
+
+jonSnowDefence += 25
+if (jonSnowHealth <= jamieLannisterAttack - jonSnowDefence) {
+    console.log('Jon Snow is dead.')
+} else {
+    // jonSnowHealth -= (jamieLannisterAttack - jonSnowDefence)
+    jonSnowHealth = jonSnowHealth - (jamieLannisterAttack - jonSnowDefence)
+    console.log(`Jon Snow health is down to : ${jonSnowHealth}`)
+}
