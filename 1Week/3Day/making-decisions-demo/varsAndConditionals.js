@@ -16,7 +16,7 @@ if (jonSnowAttack > jamieLannisterAttack) {
 }
 
 let jonSnowHealth = 100
-let jonSnowDefence = 0
+let jonSnowDefense = 0
 
 if (jonSnowHealth <= jamieLannisterAttack) {
     console.log('Jon Snow has been slain.')
@@ -25,11 +25,25 @@ if (jonSnowHealth <= jamieLannisterAttack) {
     console.log(`Jon Snow health is down to : ${jonSnowHealth}`)
 }
 
-jonSnowDefence += 25
-if (jonSnowHealth <= jamieLannisterAttack - jonSnowDefence) {
+jonSnowDefense += 25
+if (jonSnowHealth <= jamieLannisterAttack - jonSnowDefense) {
     console.log('Jon Snow is dead.')
 } else {
     // jonSnowHealth -= (jamieLannisterAttack - jonSnowDefence)
-    jonSnowHealth = jonSnowHealth - (jamieLannisterAttack - jonSnowDefence)
+    jonSnowHealth = jonSnowHealth - (jamieLannisterAttack - jonSnowDefense)
     console.log(`Jon Snow health is down to : ${jonSnowHealth}`)
+}
+
+let isDead = false
+// Jamie uses a gatling gun at john 3 times as he runs into the forest
+// there is a 50% chance, per gun usage, that John is dead.
+for (let i = 1; i <= 3; i++) {
+    isDead = Math.random() > .5
+    if (isDead === true) {
+        console.log(`John has died after ${i} rounds.`)
+        break
+    }
+}
+if (isDead === false) {
+    console.log('It is a miracle! John is alive after has bombardment.')
 }
