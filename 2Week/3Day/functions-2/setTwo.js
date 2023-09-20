@@ -296,7 +296,11 @@ var users = [
 
 // CODE HERE 
 function getUserById(array, id, callback) {
-  
+  array.forEach((item) => {
+    if (item.id === id) {
+      callback(item)
+    }
+  })
 }
 
 
@@ -305,6 +309,6 @@ function getUserById(array, id, callback) {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// })
+getUserById(users, '15a', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
