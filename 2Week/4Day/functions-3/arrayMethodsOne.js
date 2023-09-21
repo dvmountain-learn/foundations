@@ -112,19 +112,19 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 // CODE HERE
 // Solution #1
-const totalOrderedByMap = orders
-                      .map(value => value.price * value.tax)
-                      .reduce((total, price) =>  total + price)
+// const totalOrderedByMap = orders
+//                       .map(value => value.price * value.tax)
+//                       .reduce((total, price) =>  total + price)
 
-// Solution #2
-const totalOrdered = orders.reduce((total, value) => {
-  return total + (value.price * value.tax)
-}, 0)
+// // Solution #2
+// const totalOrdered = orders.reduce((total, value) => {
+//   return total + (value.price * value.tax)
+// }, 0)
 
-let newOrdered = orders.map((value) => (value.price) - (value.price * value.tax))
-let newReducecOrdered = newOrdered.reduce((acc, value) => acc + value)
+let newOrdered = orders.map((value) => (value.price) + (value.price * value.tax))
+let totalOrdered = newOrdered.reduce((acc, value) => acc + value)
 console.log(newOrdered)
-console.log(newReducecOrdered)
+console.log(totalOrdered)
 
 // console.log(totalOrderedByMap)
 // console.log(totalOrdered)
