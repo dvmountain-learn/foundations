@@ -58,6 +58,11 @@ h2.logo {
     font-weight: 900;
 }
 
+.container #banner a img {
+    width: 100%;
+    height: auto;
+}
+
 hr {
     border: 1px dotted gray;
 }
@@ -81,10 +86,6 @@ hr {
     width: 70%;
 }
 
-.column img a:hover > h2.title {
-    color: red;
-}
-
 .column .title {
     font-size: 1vw;
 }
@@ -93,12 +94,82 @@ hr {
     color: teal;
 }
 
+.column .title:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
 .column .price {
     font-size: 1.5vw;
     font-weight: bold;
 }
 
+footer {
+    height:  250px;
+    background-color: black;
+}
+
+.footer-col {
+    float: left;
+    width: 32%;
+    padding: 10px;
+    height: 100%; 
+    margin: 0 30px;
+}
+
+.footer-col h4 {
+    color: teal;
+    font-size: 1.6vw;
+    font-weight: bolder;
+}
+
+.about {
+    text-align: left;
+    font-size: 1vw;
+    font-weight: 300;
+    color: white;
+}
+
+.location {
+    text-align: left;
+    font-size: 1vw;
+    font-weight: 300; 
+    color: white;
+}
+
+.location img {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-col ul {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.footer-col ul a {
+    text-decoration: none;
+    text-align: left;
+    color: white;
+}
+
+.footer-col ul a:hover {
+    color: red;
+}
+
+.footer-col ul a li {
+    padding: 5px 0;
+}
+
 footer p {
     text-align: center;
     font-weight: bold;
+
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: yellow;
 }
