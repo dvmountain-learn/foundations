@@ -296,11 +296,26 @@ var users = [
 
 // CODE HERE 
 function getUserById(array, id, callback) {
-  array.forEach((item) => {
+  // Method 1
+  // array.forEach((item) => {
+  //   if (item.id === id) {
+  //     callback(item)
+  //   }
+  // })
+
+  // Method 2
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i].id === id) {
+  //     callback(array[i])
+  //   }
+  // }
+
+  // Method 3
+  for (let item of array) {
     if (item.id === id) {
       callback(item)
     }
-  })
+  }
 }
 
 
@@ -309,6 +324,6 @@ function getUserById(array, id, callback) {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-getUserById(users, '15a', user => {
+getUserById(users, '16t', user => {
   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
 })

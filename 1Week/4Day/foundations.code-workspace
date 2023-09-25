@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../Assessment"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "foundations"
+	}
+}
