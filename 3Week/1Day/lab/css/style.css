@@ -105,8 +105,9 @@ hr {
 }
 
 footer {
-    height:  250px;
+    height:  260px;
     background-color: black;
+    margin-top: 20px;
 }
 
 .footer-col {
@@ -140,6 +141,7 @@ footer {
 .location img {
     width: 20px;
     height: 20px;
+    margin-bottom: -5px;
 }
 
 .footer-col ul {
@@ -151,6 +153,7 @@ footer {
     text-decoration: none;
     text-align: left;
     color: white;
+    font-size: 1vw;
 }
 
 .footer-col ul a:hover {
