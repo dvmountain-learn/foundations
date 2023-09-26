@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,500&display=swap');
 /*
     charcoal background: #2D333B
     black background: #22272E
@@ -18,10 +19,15 @@
     --orange-color: #EC775C;
     --blue-color: #539BF5;
     --yellow-color: #F1E05A;
-    --redorange-color: #E34C26;
+    --red-orange-color: #E34C26;
 }
 
 /*GLOBAL*/
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 body {
     background: var(--black-color);
     margin: 0;
@@ -48,7 +54,7 @@ header {
 
 .form-search input {
     background: var(--black-color);
-    border: solid var(--light-color) 0px;
+    border: solid var(--outlines-color) 1px;
     padding: 7px;
     border-radius: 5px;
     width: 200px;
@@ -123,21 +129,43 @@ li a:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
-    height: 100px;
+    height: 70px;
     color: var(--light-color);
+    width: 50%;
+    margin: 0 auto;
+    z-index: 1;
 }
 
 .tab-section > div {
-    background: rebeccapurple;
+    /* background: rebeccapurple; */
     width: 100px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+.underline {
+    width: 100px;
+    border-bottom: solid var(--red-orange-color) 3px;
+}
+
+.underline > p {
+    text-align: center;
+    padding: 10px;
+}
+
+.no-underline {
+    width: 100px;
+    border-bottom: solid var(--red-orange-color) 0px;
+}
+
+.no-underline > p {
+    text-align: center;
+    padding: 10px;
 }
 
 /*REPO NAV*/
 hr {
-    border: solid var(--charcoal-color) 1px;
+    border: solid var(--charcoal-color) 0.7px;
 }
-
 
 /*CONTAINER*/
 .container {
@@ -149,10 +177,10 @@ hr {
 
 /*LEFT PROFILE*/
 #profile {
-    width: 30%;
-    /* background: #539BF5; */
+    width: 25%;
     height: 300px;
     color: white;
+
 }
 
 .profile-photo {
@@ -160,9 +188,11 @@ hr {
     height: 300px;
     border-radius: 150px;
 }
+
 .name {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    margin: 5px 0;
 }
 
 .tag {
@@ -181,6 +211,8 @@ hr {
     width: 100%;
     border-radius: 4px;
     color: white;
+    cursor: pointer;
+    border: solid var(--outlines-color) .5px;
 }
 
 .react {
@@ -197,7 +229,7 @@ hr {
 
 /*RIGHT REPOS*/
 #repo {
-    width: 65%;
+    width: 71%;
     /* background: red; */
     position: absolute;
     right: 0;
@@ -281,19 +313,19 @@ hr {
 }
 
 .html {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     background: #E34C26;
-    border-radius: 8px;
-    margin: 0 5px;
+    border-radius: 7px;
+    margin-right: 5px;
 }
 
 .javascript {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     background: #F1E05A;
-    border-radius: 8px;
-    margin: 0 5px; 
+    border-radius: 7px;
+    margin-right: 5px; 
 }
 
 .language {
