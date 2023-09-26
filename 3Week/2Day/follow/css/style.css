@@ -1,0 +1,126 @@
+
+body > div {
+    background: blanchedalmond;
+    position: relative;
+    width: 500px;
+    height: 2000px;
+}
+
+.children {
+    width: 100px;
+    height: 100px;
+    border: solid black 5px;
+}
+
+#box1 {
+    background: red;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+}
+
+#box2 {
+    background: yellow;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+#box3 {
+    background: green;
+    position: sticky;
+    top: 5px;
+    z-index: 1;
+}
+
+#inline-section {
+    background: aqua;
+}
+
+#inline-section > div {
+    background: blue;
+    display: inline;
+    border: dotted black 5px;
+    height: 100px;
+}
+
+#id-section {
+    background: chartreuse;
+}
+
+#id-section > div {
+    background: green;
+    display: inline-block;
+    border: dashed black 5px;
+    width: 100px;
+    height: 100px;
+}
+
+#flex-section {
+    background: crimson;
+    display: flex;
+    height: 250px;
+    /* flex-direction: row-reverse; */
+    border: solid black 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+#flex-section > div {
+    background: gray;
+    
+    height: 100px;
+    width: 100px;
+}
+
+#baseline-section {
+    background: brown;
+    display: flex;
+    align-items: baseline;
+}
+
+#baseline-section > div {
+    background: orange;
+    border: solid white 5px;
+    display: flex;
+    align-items: center;
+}
+
+#tall {
+    height: 150px;
+}
+
+#short {
+    height: 100px;
+}
+
+#medium {
+    height: 125px;
+}
+
+#content-box {
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    border: solid blue 10px;
+    padding: 5px;
+    background-color: yellow;
+}
+
+#border-box {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border: solid blue 10px;
+    padding: 5px;
+    background-color: yellow;
+}
+
+footer {
+    background: blueviolet;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
