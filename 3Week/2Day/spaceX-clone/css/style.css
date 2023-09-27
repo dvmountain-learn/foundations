@@ -1,0 +1,131 @@
+
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 80px;
+    background: #000;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav > div a {
+    text-decoration: none;
+}
+
+.nav > div a h1 {
+    font-size: 30px;
+    font-weight: 900;
+    padding: 25px;
+    color: white;
+}
+
+.nav > div a p {
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    padding: 35px;
+    right: 0;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333333; */
+    margin-top: 20px;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    top: 0;
+    margin: 0;
+}
+
+.section-info {
+    width: 100%;
+}
+
+.data-info {
+    padding: 40px;
+    z-index: 1;
+    display: inline-block;
+    margin-top: -350px;
+    /* background-color: gray; */
+    margin-left: 10px;
+}
+
+.data-info > h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.data-info > h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.data-info > a {
+    text-decoration: none;
+}
+
+.data-info > a p {
+    padding: 20px;
+    /* background: red; */
+    width: 140px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    border: solid white 2px;
+}
+
+.data-info > a:hover p {
+    background: white;
+    color: #000;
+    transition: 1s;
+}
+
+.clear-space {
+    clear: both;
+}
+
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background: #000;
+}

@@ -1,0 +1,28 @@
+html {
+    background: lightgray;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+header {
+    height: 100px;
+    background: gray;
+}
+
+.container {
+    margin: 0 auto;
+    background: white;
+    width: 80%;
+    height: 550px;
+}
+
+footer {
+    width: 80%;
+    height: 100px;
+    background: black;
+    margin: 0 auto;
+}
