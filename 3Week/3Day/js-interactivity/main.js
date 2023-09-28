@@ -11,34 +11,47 @@ function addMovie(event) {
     let span = document.createElement('span')
     let movieTitle = inputField.value
     if (movieTitle !== '') {
-    // li.textContent = movieTitle
-    span.textContent = movieTitle
-    ul.appendChild(li)
-    deleteBtn.innerHTML = ' X '
-    deleteBtn.id = 'remove'
-    li.appendChild(span)
-    li.appendChild(deleteBtn)
-    inputField.value = ''
+        span.textContent = movieTitle
+        ul.appendChild(li)
+        deleteBtn.innerHTML = ' X '
+        deleteBtn.id = 'remove'
+        li.appendChild(span)
+        li.appendChild(deleteBtn)
+        inputField.value = ''
     } else {
-        alert('The movie is required.')
+        message.textContent = 'The movie title is required.'
+        revealMessage()
     }
-
     deleteBtn.addEventListener('click', deleteMovie)
     span.addEventListener('click', crossOffMovie)
 }
 
 function deleteMovie(event) {
-    event.target.parentNode.remove()
-    message.textContent = 'Movie deleted!'
+    let movieTitle = event.target.parentNode.querySelector('span').innerHTML
+    var isConfirm = confirm(`Are you sure you want to delete this movie: ${movieTitle}?`);
+    if (isConfirm) {
+        event.target.parentNode.remove()
+        message.textContent = `${movieTitle} deleted!`
+        revealMessage()
+    }
 }
 
 function crossOffMovie(event) {
+    let movieTitle = event.target.innerHTML
     event.target.classList.toggle('checked') 
     if (event.target.classList.contains('checked')) {
-        message.textContent = 'Movie watched!'
+        message.textContent = `${movieTitle} watched!`
     } else {
-        message.textContent = 'Movie added back!'
+        message.textContent = `${movieTitle} added back!`
     }
+    revealMessage()
+}
+
+function revealMessage() {
+    message.classList.remove('hide')
+    setTimeout(() => {
+        message.classList = 'hide'
+    }, 1000)
 }
 
 // document.querySelector('button').addEventListener("click", addMovie)
