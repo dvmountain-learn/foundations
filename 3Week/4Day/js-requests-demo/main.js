@@ -33,6 +33,21 @@ function clearCharacters() {
   charContainer.innerHTML = ``
 }
 
+for (let i = 0; i < charBtns.length; i++) {
+  charBtns[i].addEventListener('click', (event) => {
+    clearCharacters()
+    let search = event.target.id
+    axios.get(baseURL + 'character/' + search)
+      .then((res) => {
+        // console.log(res.data)
+        createCharacterCard(res.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
+}
+
 getAllBtn.addEventListener('click', (event) => {
   clearCharacters()
   axios.get(baseURL + 'characters')
@@ -47,53 +62,53 @@ getAllBtn.addEventListener('click', (event) => {
     })
 })
 
-charBtns[0].addEventListener('click', (event) => {
-  clearCharacters()
-  axios.get(baseURL + 'character/jake')
-    .then((res) => {
-      // console.log(res.data)
-      createCharacterCard(res.data)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
+// charBtns[0].addEventListener('click', (event) => {
+//   clearCharacters()
+//   axios.get(baseURL + 'character/jake')
+//     .then((res) => {
+//       // console.log(res.data)
+//       createCharacterCard(res.data)
+//     })
+//     .catch((error) => {
+//       console.log(error)
+//     })
+// })
 
-charBtns[1].addEventListener('click', (event) => {
-  clearCharacters()
-  axios.get(baseURL + 'character/amy')
-    .then((res) => {
-      // console.log(res.data)
-      createCharacterCard(res.data)
-    })
-    .catch((error) => {
+// charBtns[1].addEventListener('click', (event) => {
+//   clearCharacters()
+//   axios.get(baseURL + 'character/amy')
+//     .then((res) => {
+//       // console.log(res.data)
+//       createCharacterCard(res.data)
+//     })
+//     .catch((error) => {
 
-    })
-})
+//     })
+// })
 
-charBtns[2].addEventListener('click', (event) => {
-  clearCharacters()
-  axios.get(baseURL + 'character/rosa')
-    .then((res) => {
-      // console.log(res.data)
-      createCharacterCard(res.data)
-    })
-    .catch((error) => {
+// charBtns[2].addEventListener('click', (event) => {
+//   clearCharacters()
+//   axios.get(baseURL + 'character/rosa')
+//     .then((res) => {
+//       // console.log(res.data)
+//       createCharacterCard(res.data)
+//     })
+//     .catch((error) => {
 
-    })
-})
+//     })
+// })
 
-charBtns[3].addEventListener('click', (event) => {
-  clearCharacters()
-  axios.get(baseURL + 'character/charles')
-    .then((res) => {
-      // console.log(res.data)
-      createCharacterCard(res.data)
-    })
-    .catch((error) => {
+// charBtns[3].addEventListener('click', (event) => {
+//   clearCharacters()
+//   axios.get(baseURL + 'character/charles')
+//     .then((res) => {
+//       // console.log(res.data)
+//       createCharacterCard(res.data)
+//     })
+//     .catch((error) => {
 
-    })
-})
+//     })
+// })
 
 ageForm.addEventListener('submit', (event) => {
   event.preventDefault()
