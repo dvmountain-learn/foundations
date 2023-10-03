@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "address": "Tonle Bassac, Chamkarmon, Phnom Penh",
+        "price": 80000,
+        "imageURL": "https://images.realestate.com.kh/__sized__/listings/2023-02/j3-thumbnail-750x562-70.jpeg"
+    },
+    {
+        "id": 2,
+        "address": "Srah Chak, Daun Penh, Phnom Penh",
+        "price":122000,
+        "imageURL": "https://images.realestate.com.kh/__sized__/listings/2022-09/ok-thumbnail-750x562-70.jpeg"
+    },
+    {
+        "id": 3,
+        "address": "Russey Keo, Russey Keo, Phnom Penh",
+        "price": 40000,
+        "imageURL": "https://images.realestate.com.kh/listings/2023-02/master-plan.jpeg"
+    },
+    {
+        "id": 4,
+        "address": "Khmuonh, Sen Sok, Phnom Penh",
+        "price": 185000,
+        "imageURL": "https://images.realestate.com.kh/__sized__/listings/2022-10/20220523_prince_entrance_view02-thumbnail-750x562-70.jpeg"
+    },
+    {
+        "id": 5,
+        "address": "Prey Sa, Dangkao, Phnom Penh",
+        "price": 145447,
+        "imageURL": "https://images.realestate.com.kh/__sized__/listings/2022-01/272127493_269274718627955_1496729415973923959_n-thumbnail-750x562-70.jpeg"
+    }
+]

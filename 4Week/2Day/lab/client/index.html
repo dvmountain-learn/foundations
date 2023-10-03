@@ -2,13 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House List</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Back End 2</title>
 </head>
 <body>
-    
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <header>
+        <h1>House List</h1>
+    </header>
+    <main>
+
+    <form>
+        <input 
+            type='text'
+            id="address"
+            placeholder="What's the house's address?"/>
+
+        <input 
+            type="text" 
+            id="price"
+            placeholder="How much $?"
+            >
+        <input 
+            type='text'
+            id="img"
+            placeholder='Paste an image URL'/>
+        <button>Add House</button>
+    </form>
+
+    <section id="houses-container"></section>
+
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
