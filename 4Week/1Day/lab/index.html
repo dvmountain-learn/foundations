@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Challenge</title>
+    <style>
+        .container {
+            width: 70%;
+            margin:  0 auto;
+            margin-top: 100px;
+        }
+        input#named {
+            height: 30px;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100px;
+            height: 35px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <input id="named" type="text" required>
+            <br>
+            <button id="create-post">Post</button>
+            <button id="list-post">Post Lists</button>  
+        </form>
+        <br>
+        <ul></ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
