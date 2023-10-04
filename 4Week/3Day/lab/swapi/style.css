@@ -1,0 +1,15 @@
+
+body {
+    margin: 0 auto;
+    width: 60%;
+}
+
+button {
+    width: 50%;
+    height: 35px;
+    margin-top: 50px;
+}
+
+h2.header {
+    color: blue;
+}

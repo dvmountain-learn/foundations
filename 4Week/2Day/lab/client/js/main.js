@@ -30,7 +30,7 @@ const form = document.querySelector('form')
 const baseURL = `http://127.0.0.1:4000/api/houses`
 
 const housesCallback = ({ data: houses }) => displayHouses(houses)
-const errCallback = err => console.log(err.response)
+const errCallback = err => console.log(err.response.data)
 
 const getAllHouses = () => axios.get(baseURL).then(housesCallback).catch(errCallback)
 const createHouse = body => axios.post(baseURL, body).then(housesCallback).catch(errCallback)

@@ -1,0 +1,79 @@
+Answer: Part 1)
+1) https://swapi.dev/api/people/4/
+2) https://swapi.dev/api/planets/2/
+3) https://swapi.dev/api/starships/10/
+4) https://swapi.dev/api/people/2/ and https://swapi.dev/api/species/2/
+5) https://swapi.dev/api/people/10/
+6) https://swapi.dev/api/planets/?search=Alderaan
+
+
+Answer: Part 2)
+1)  - POST request to send a body 
+    - it need to send object { text: string }
+
+2) Response body of an array 
+    [
+        {
+            "id": 1812,
+            "text": "0000 The text used here will appear in the new post object",
+            "date": "03 Oct 2023"
+        },
+        {
+            "id": 1811,
+            "text": "The text used here will appear in the new post object",
+            "date": "03 Oct 2023"
+        }
+    ]
+3) If you try to past id that not existing but api always response body of an array 
+without any get an error 
+    [
+        {
+            "id": 1812,
+            "text": "0000 The text used here will appear in the new post object",
+            "date": "03 Oct 2023"
+        },
+        {
+            "id": 1811,
+            "text": "The text used here will appear in the new post object",
+            "date": "03 Oct 2023"
+        }
+    ]
+4) Response codes: 
+    - 200: Success 
+    - 400: Not Found
+    - 409: Query is empty (Request query is missing required text property.) 
+
+5)  - (POST) URL: https://practiceapi.devmountain.com/api/posts
+    - Body: 
+        {
+            "text": "Text that you want to insert"
+        }
+
+6)  - (PUT) URL: https://practiceapi.devmountain.com/api/posts?id=1814
+    - Body: 
+        {
+            "color": "pink"
+        }
+
+7)   - (GET) URL: https://practiceapi.devmountain.com/api/posts/filter?text=blue
+
+8)  - Content Type: "application/json"
+    - Response body an array of data:
+    [
+        {
+            "id": 1812,
+            "text": "0000 The text used here will appear in the new post object",
+            "date": "03 Oct 2023"
+        },
+        {
+            "id": 1811,
+            "text": "The text used here will appear in the new post object",
+            "date": "03 Oct 2023"
+        }
+    ]
+
+9)  -  PUT request to return a 409 status: Request is missing either required id in the query or text in the body.
+
+10)  if you try to send a query in the GET request URL : https://practiceapi.devmountain.com/api/posts/?text=hello because I think related to logic code in function get with condition passing query type none return URL : https://practiceapi.devmountain.com/api/posts/
+
+Answer: Part 3) reference to source code (index.html, main.js, and style.css)
