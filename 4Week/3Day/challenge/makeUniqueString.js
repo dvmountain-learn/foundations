@@ -12,17 +12,15 @@ function makeUnique(letter) {
     return result.join('').replace(' ', '')
 }
 
-function test(letter) {
-    letter = letter.toLowerCase()
-    for (let i = 0; i < letter.length; i++) {
-        for (let j = 1; j < letter.length; j++) {
-            if (letter[i] !== letter[j]) {
-                letter.splice(letter[i], 1)
-            }
-        }
+function makeUnique(string){
+    let mt = [];
+    for(let i = 0; i < string.length; i++) {
+      if(string.indexOf(string[i]) === i) {
+        mt.push(string[i])
+      }
     }
-    return letter
-}
+    return mt.join('')
+  }
 
 console.log(makeUnique('helloWorLd'))
 console.log(makeUnique('hello world'))
