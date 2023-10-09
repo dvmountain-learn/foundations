@@ -1,0 +1,27 @@
+CREATE TABLE melons (
+  id serial primary key, 
+  name varchar(40) not null,
+  color varchar(20),
+  price integer,
+);
+
+CREATE table pokemon(
+ id SERIAL PRIMARY KEY,
+  name VARCHAR,
+  level INT,
+  trainer VARCHAR
+);
+
+INSERT INTO pokemon (name, level, trainer) VALUES 
+('pikachu', 20, 'Jared'),
+('pikachu', 30, 'Jared'),
+('pikachu', 99, 'Ash'),
+('blastoise', 76, 'Ash'),
+('charizard', 76, 'Ash'),
+('staryu', 18, 'Misty'),
+('starmie', 21, 'Misty'),
+('geodude', 12, 'Brock'),
+('onix', 14, 'Brock');
+
+
+SELECT * FROM pokemon;

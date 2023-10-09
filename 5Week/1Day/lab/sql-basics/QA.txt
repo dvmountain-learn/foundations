@@ -1,0 +1,111 @@
+SQL problems
+Part 1: The person table
+In the person.sql file, write out the code for the following problems:
+
+1) Create a table called person with fields for person_id, name, age, height (in cm) , city, and favorite_color. The person_id should be an auto-incrementing id/primary key (use type: SERIAL).
+---------------------------------------------------------
+CREATE TABLE person(
+    person_id SERIAL PRIIMARY KEY,
+    name varchar,
+    age integer,
+    height float,
+    city varchar(100),
+    favorite_color varchar(30)
+);
+
+
+Add 5 different people into the person database. Remember to not include the person_id, because it should auto-increment.
+
+Select all the people in the person table by height from tallest to shortest.
+
+Select all the people in the person table by height from shortest to tallest.
+
+Select all the people in the person table by age from oldest to youngest.
+
+Select all the people in the person table older than age 20.
+
+Select all the people in the person table that are exactly 18.
+
+Select all the people in the person table that are less than 20 and older than 30.
+
+Select all the people in the person table that are not 27 (use not equals).
+
+Select all the people in the person table where their favorite color is not red.
+
+Select all the people in the person table where their favorite color is not red and is not blue.
+
+Select all the people in the person table where their favorite color is orange or green.
+
+Select all the people in the person table where their favorite color is orange, green or blue (use IN).
+
+Select all the people in the person table where their favorite color is yellow or purple (use IN).
+
+Part 2: The orders table
+In the orders.sql file, write out the code for the following problems:
+
+Create a table called orders that records: order_id, person_id, product_name, product_price, quantity.
+
+Add 5 total orders from at least two different people to the orders table. (The person who made this order is indicated by its person_id — refer to the rows you made in Part 1.)
+
+Select all the records from the orders table.
+
+Calculate the total number of products ordered.
+
+Calculate the total order price for all orders.
+
+Calculate the total order price by a single person_id.
+
+Part 3: The artist table
+The next questions make use of the artist table, which is already present in the sample data — you don’t have to create it your self.
+
+In the artist.sql file, write out the code for the following problems:
+
+Add 3 new artists to the artist table (use the \d command to look at the schema and find which fields you need to specify!)
+
+Select 10 artists in reverse alphabetical order.
+
+Select 5 artists in alphabetical order.
+
+Select all artists that start with the word 'Black'.
+
+Select all artists that contain the word 'Black'.
+
+Part 4: The employee table
+The next questions make use of the employee table, which is also already present in the sample data.
+
+In the employee.sql file, write out the code for the following problems:
+
+List the first and last names of all employees that live in Calgary.
+
+Find the birthdate for the youngest employee.
+
+Find the birthdate for the oldest employee.
+
+Find everyone that reports to Nancy Edwards (find Nancy Edwards’ employee_id, then look for employees who have that id in their reports_to field).
+
+Count how many people live in Lethbridge.
+
+Part 5: The invoice table
+The next questions make use of the invoice table, which is also already present in the sample data.
+
+In the invoice.sql file, write out the code for the following problems:
+
+Count how many orders were made from the USA.
+
+Find the largest order total amount.
+
+Find the smallest order total amount.
+
+Find all orders bigger than $5.
+
+Count how many orders were smaller than $5.
+
+Count how many orders were in CA, TX, or AZ (use IN).
+
+Get the average total of the orders.
+
+Get the total sum of the orders.
+
+Update the invoice with an invoice_id of 5 to have a total order amount of 24.
+
+Delete the invoice with an invoice_id of 1.
