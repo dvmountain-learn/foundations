@@ -5,9 +5,13 @@
 		},
 		{
 			"path": "../../../Assessment"
+		},
+		{
+			"path": "../../../../Node"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Assessment"
+		"liveServer.settings.multiRootWorkspaceName": "Node",
+		"git.ignoreLimitWarning": true
 	}
 }
